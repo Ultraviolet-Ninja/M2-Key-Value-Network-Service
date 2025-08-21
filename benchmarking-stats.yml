@@ -1,0 +1,14 @@
+Local-Reads:
+  - Read Stats {5=DoubleSummaryStatistics{count=15, sum=470.428363, min=31.250000, average=31.361891, max=31.645570}}
+  - Read Stats {10=DoubleSummaryStatistics{count=30, sum=943.255049, min=31.152648, average=31.441835, max=31.746032}}
+  - Read Stats {20=DoubleSummaryStatistics{count=60, sum=1856.281740, min=30.030030, average=30.938029, max=31.446541}}
+  - Read Stats {50=DoubleSummaryStatistics{count=150, sum=4692.723900, min=31.152648, average=31.284826, max=31.446541}}
+  - Read Stats {100=DoubleSummaryStatistics{count=300, sum=9299.329063, min=30.581040, average=30.997764, max=31.347962}}
+
+Mac-Server_Laptop-Clients_Same-Network:
+  - Read Stats {5=DoubleSummaryStatistics{count=15, sum=177.657223,     min=11.695906, average=11.843815, max=12.004802}}
+  - Read Stats {10=DoubleSummaryStatistics{count=30, sum=355.493434,    min=11.820331, average=11.849781, max=11.890606}}
+  - Read Stats {20=DoubleSummaryStatistics{count=60, sum=669.970874,    min=10.845987, average=11.166181, max=11.520737}}
+  - Read Stats {50=DoubleSummaryStatistics{count=150, sum=1638.280907,  min=10.660981, average=10.921873, max=11.235955}
+  - Read Stats {100=DoubleSummaryStatistics{count=300, sum=3076.650753, min=10.121457, average=10.255503, max=10.438413}}
+

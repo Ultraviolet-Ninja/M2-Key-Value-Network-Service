@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd | HH:mm:ss} [%thread] %p | %logger{25}%n\t%m%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <appender name="WRITE_AHEAD_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/write-ahead.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/write-ahead-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%p %d{yyyy-MM-dd | HH:mm:ss} %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <appender name="TRACE_LEVEL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/trace-conc-network-proj.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/conc-network-proj-trace-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd | HH:mm:ss} %p [%t] %c{2} - %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>TRACE</level>
+        </filter>
+    </appender>
+
+    <root level="trace">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="WRITE_AHEAD_LOG" />
+        <appender-ref ref="TRACE_LEVEL_FILE" />
+    </root>
+</configuration>
